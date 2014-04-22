@@ -1,4 +1,4 @@
-angular.module 'helm', ['duScroll', 'ngTouch']
+angular.module 'helm', ['duScroll', 'ngTouch', 'ui.bootstrap']
   .controller 'thumb', [
     '$http', '$scope', '$document',
     ($http, $scope, $document) ->
