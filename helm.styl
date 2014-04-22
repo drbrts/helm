@@ -4,7 +4,12 @@
 .transform
   -webkit-transition -webkit-transform .25s
 
+html, body
+  width 100%
+  overflow-x hidden
+
 .blue-marlin
+  width 100%
   min-height 500px
   position relative
 
@@ -22,6 +27,7 @@
     z-index 10
 
 .supertanker
+  width 100%
   position relative
   z-index 5
 
@@ -31,8 +37,9 @@
   .navbar-left:first-child
     margin-left -15px
 
-// .tanker
-//   background-color lightcoral
+.tanker
+  cf()
+  padding: 0 .55%
 
 .nav
   & li a
