@@ -1,0 +1,12 @@
+@import "bower_components/normalize-css/normalize.css";
+
+$include-html-classes: false;
+$include-html-button-classes: true;
+@import "bower_components/foundation/scss/foundation";
+
+@import "sass/_variables";
+@import "sass/_globals";
+@import "sass/_bucket";
+@import "sass/_masthead";
+@import "sass/_thumbnails";
+

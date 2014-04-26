@@ -1,0 +1,4 @@
+.thumbnails__container
+  ul.thumbnails(ng-controller="thumbnails")
+    li.thumbnail(ng-repeat="t in thumbnails")
+      .thumbnail__img: img(ng-src="{{t.thumb.src}}")

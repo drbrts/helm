@@ -1,0 +1,27 @@
+.bucket(ng-class="{'active': !!bucketActive}")
+  article.bucket__article
+    include _masthead
+    include _thumbnails
+
+  aside.bucket__aside
+    ul.bucket__nav
+      li: a <i class="fa fa-user fa-fw"></i> Login
+      li: a <i class="fa fa-phone fa-fw"></i> Support
+      li: a <i class="fa fa-question fa-fw"></i> FAQ's
+      li: a <i class="fa fa-flag fa-fw"></i> Site Language <i class="pull-right fa fa-chevron-down"></i>
+      li: a <i class="fa fa-rocket fa-fw"></i> Eventual Tour Link
+      li.bucket__cta
+        a
+          i.fa.fa-star.fa-fw
+          | JOIN FREE TODAY
+          p Create your FREE account now, it takes only a few moments.
+
+    footer.bucket__footer
+      p.small All models appearing on this website are 18 years or older.
+      p.small: a 18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement
+      p.small.legal
+        a DMCA Notice of Copyright Infringement
+        br
+        a Terms &amp; Conditions
+        |&nbsp;|&nbsp;
+        a Privacy Policy

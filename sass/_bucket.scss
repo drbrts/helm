@@ -1,0 +1,116 @@
+$bucket-aside-background: #6d6d6d !default;
+$bucket-divider-color: #7F7F7F !default;
+$bucket-link-color: #ffffff !default;
+$bucket-cta-color: #C9C8C8 !default;
+$bucket-cta-bg: #4F4F4F !default;
+$bucket-footer-color: #ffffff !default;
+
+.bucket {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $screen-lg) {
+    position: relative;
+    height: auto;
+  }
+
+  -webkit-transition: -webkit-transform .25s;
+  -webkit-transform: translate3d(0, 0, 0);
+
+  &.active {
+    -webkit-transform: translate3d(-260px, 0, 0);
+  }
+}
+
+.bucket__article {
+  position: relative;
+  z-index: 100;
+  background: $body-bg;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.bucket__aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  z-index: 10;
+  background: $bucket-aside-background;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(50%, 0, 0);
+  -webkit-transition: -webkit-transform .25s;
+
+  .active & {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+.bucket__nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li + li {
+    border-top: 1px solid $bucket-divider-color;
+  }
+
+  a {
+    position: relative;
+    font-family: Helvetica;
+    color: $bucket-link-color;
+    line-height: 42px;
+    display: block;
+    padding:0 10px 0 50px;
+  }
+
+  i {
+    line-height: inherit;
+  }
+
+  .fa-fw {
+    position: absolute;
+    left: 25px;
+  }
+}
+
+.bucket__cta {
+  background: $bucket-cta-bg;
+  a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 25px 0 0 ;
+    color: $bucket-cta-color;
+    line-height: normal;
+  }
+}
+
+.bucket__footer {
+  color: $bucket-footer-color;
+  padding: 25px 0;
+
+  @media (min-width: $screen-sm) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  p {
+    padding: 0 25px;
+    margin: 0 0 10px 0;
+  }
+
+  .legal {
+    line-height: 1.5;
+  }
+}

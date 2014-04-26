@@ -1,0 +1,48 @@
+@require 'bower_components/jeet/stylus/jeet'
+@require 'bower_components/nib/'
+
+global-reset()
+
+body
+  padding 50px
+  padding-bottom 2000px
+  cf()
+
+.container
+  position relative
+
+  li
+    col(1/5, cycle:5)
+    list-style-type none
+    overflow hidden
+    margin-top 10px
+    transition(margin, .5s)
+
+    &:nth-child(5n+1)
+      clear both
+
+    &.selected
+      margin-bottom 200px
+
+  .thumb
+    width: 100%
+    position relative
+
+    &::after
+      display block
+      content ''
+      padding-top 75%
+
+    img
+      width: 100%
+      absolute top left bottom right
+
+  .space
+    background red
+    absolute left right 0
+    overflow hidden
+    height 0
+    transition(height, .5s)
+
+    &.open
+      height 200px
