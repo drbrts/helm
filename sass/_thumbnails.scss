@@ -4,9 +4,9 @@
   overflow: hidden;
 
   // padding-top: 42px;
-  // @media (min-width: $screen-sm) {
-  //   padding-top: 56px;
-  // }
+  @media (min-width: $screen-sm) {
+    padding-top: 56px;
+  }
 }
 
 .thumbnails {
