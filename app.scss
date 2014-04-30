@@ -1,4 +1,3 @@
-@require "compass";
 @import "bower_components/normalize-css/normalize.css";
 
 $include-html-classes: false;
@@ -10,5 +9,6 @@ $include-html-form-classes: true;
 @import "sass/_globals";
 @import "sass/_bucket";
 @import "sass/_masthead";
+@import "sass/_wonderbar";
 @import "sass/_thumbnails";
 

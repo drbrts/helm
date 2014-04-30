@@ -1,12 +1,12 @@
 .thumbnails__container {
-  padding-top: 42px;
   @include clearfix();
   width: 100%;
   overflow: hidden;
 
-  @media (min-width: $screen-sm) {
-    padding-top: 56px;
-  }
+  // padding-top: 42px;
+  // @media (min-width: $screen-sm) {
+  //   padding-top: 56px;
+  // }
 }
 
 .thumbnails {

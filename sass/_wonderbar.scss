@@ -1,8 +1,13 @@
 .wonderbar {
   @include clearfix();
   position: relative;
-}
+  padding: 10px;
 
-.wonderbar__filters {
-  
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
+
+  .button {
+    margin-bottom: 0;
+  }
 }
