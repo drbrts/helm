@@ -21,6 +21,7 @@ $bucket-footer-color: #ffffff !default;
   &.active {
     -webkit-transform: translate3d(-260px, 0, 0);
 
+
     @media (min-width: $screen-lg) {
       -webkit-transform: translate3d(0, 0, 0);
     }
@@ -34,6 +35,7 @@ $bucket-footer-color: #ffffff !default;
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  box-shadow: 4px 0 2px -2px rgba(0,0,0,0.4)
 }
 
 .bucket__shield {
@@ -66,7 +68,7 @@ $bucket-footer-color: #ffffff !default;
     -webkit-transform: translate3d(100%, 0, 0);
   }
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-sm) {
     padding-top: 14px;
   }
 }
@@ -81,7 +83,7 @@ $bucket-footer-color: #ffffff !default;
     border-top: 1px solid $bucket-divider-color;
   }
 
-  a {
+  a, span {
     position: relative;
     font-family: Helvetica;
     color: $bucket-link-color;
@@ -134,3 +136,22 @@ $bucket-footer-color: #ffffff !default;
     line-height: 1.5;
   }
 }
+
+.bucket__form {
+  span {
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+  }
+
+  label {
+    user-select: none;
+    color: $bucket-link-color;
+    line-height: normal;
+  }
+
+  input:last-child {
+    margin-bottom: 0;
+  }
+}
+
