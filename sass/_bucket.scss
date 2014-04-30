@@ -89,7 +89,7 @@ $bucket-footer-color: #ffffff !default;
     color: $bucket-link-color;
     line-height: 42px;
     display: block;
-    padding:0 10px 0 50px;
+    padding:0 25px 0 50px;
   }
 
   i {
@@ -121,12 +121,6 @@ $bucket-footer-color: #ffffff !default;
   color: $bucket-footer-color;
   padding: 25px 0;
 
-  @media (min-width: $screen-sm) {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
   p {
     padding: 0 25px;
     margin: 0 0 10px 0;
@@ -139,9 +133,11 @@ $bucket-footer-color: #ffffff !default;
 
 .bucket__form {
   span {
-    padding-top: 20px;
-    padding-left: 25px;
-    padding-bottom: 20px;
+    padding: 20px 25px;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 6px;
+    }
   }
 
   label {
