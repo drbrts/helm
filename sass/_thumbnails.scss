@@ -1,15 +1,18 @@
 .thumbnails__container {
   @include clearfix();
+  position: relative;
   width: 100%;
   overflow: hidden;
-  padding-top: 56px;
+  padding-top: 56px + 16px;
 
   @media #{$media-lg} {
-    padding: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 
   @media #{$media-xl} {
-    padding: 5%
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -46,7 +49,46 @@
   @media (min-width: $screen-2x) {
     @include block-grid(7, $padding);
   }
+}
 
+.thumbnails__online {
+  position: absolute;
+  top: 56px + 16px;
+  right: 10px;
+  margin: 0;
+  -webkit-transform: translateY(-100%);
+  color: rgba(#000000, 0.2);
+
+
+  @media #{$media-sm} {
+    right: 20px;
+  }
+
+  @media #{$media-lg} {
+    left: 2.5%;
+  }
+
+  @media #{$media-xl} {
+    left: 5%;
+  }
+}
+
+.thumbnails__title {
+  position: absolute;
+  top: 56px + 16px;
+  left: 10px;
+  margin: 0;
+  -webkit-transform: translateY(-100%);
+  color: rgba(#000000, 0.2);
+
+
+  @media #{$media-sm} {
+    left: 20px;
+  }
+
+  @media #{$media-lg} {
+    display: none;
+  }
 }
 
 .thumbnail__img {

@@ -15,6 +15,7 @@
     top: 100%;
     width: 100%;
     text-align: center;
+    z-index: 10;
 
     @media #{$media-sm} {
       display: none;
@@ -93,6 +94,10 @@
   }
 
   @media #{$media-md} {
+    padding: 0 20px;
+  }
+
+  @media #{$media-lg} {
     padding: 0 28px;
   }
 
