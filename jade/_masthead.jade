@@ -1,14 +1,16 @@
 .masthead
   .masthead__brand: img(src="http://placehold.it/379x88&text=LOGO")
 
-  ul.masthead__list
-    li.item--join: a.link--join Free Acount
-    li.item--menu: span.link--menu(ng-click="bucketActive = !bucketActive") Login &nbsp; <i class="fa fa-bars"></i>
-    li.item--login: a.link--login Login <i class="fa fa-caret-down fa-lg"></i>
-
   ul.masthead__nav
     li: a Home
-    li: a New Models
+    li.new-models: a New Models
     li: a Calendar
     li: a Support
     li: a Site Language
+
+  ul.masthead__list
+    li.item--join: a.link--join Free Acount
+    li.item--menu: span.link--menu(ng-click="bucketActive = !bucketActive")
+      | {{{true: 'Close', false: 'Login'}[!!bucketActive]}}
+      i.fa(ng-class="{true: 'fa-chevron-right', false: 'fa-bars'}[!!bucketActive]")
+    li.item--login: a.link--login Login <i class="fa fa-caret-down fa-lg"></i>

@@ -14,3 +14,9 @@ $screen-md-max: $screen-lg - 1;
 $screen-lg-max: $screen-xl - 1;
 $screen-xl-max: $screen-2x - 1;
 $screen-2x-max: $screen-3x - 1;
+
+
+$media-xs: "(min-width: #{$screen-xs})";
+$media-sm: "(min-width: #{$screen-sm})";
+$media-md: "(min-width: #{$screen-md})";
+$media-lg: "(min-width: #{$screen-lg})";

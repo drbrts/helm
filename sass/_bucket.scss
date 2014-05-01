@@ -119,11 +119,10 @@ $bucket-footer-color: #ffffff !default;
 
 .bucket__footer {
   color: $bucket-footer-color;
-  padding: 25px 0;
+  padding: 25px 25px 0;
 
-  p {
-    padding: 0 25px;
-    margin: 0 0 10px 0;
+  p + p {
+    margin-top: 10px;
   }
 
   .legal {
