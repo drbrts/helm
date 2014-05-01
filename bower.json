@@ -13,9 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "jeet": "~5.1.3",
-    "nib": "~1.0.2",
     "normalize-css": "~3.0.1",
-    "compass": "chriseppstein/compass#~0.12.3"
+    "foundation": "4.3.2"
   }
 }

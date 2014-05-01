@@ -1,4 +1,7 @@
 .thumbnails__container
   ul.thumbnails(ng-controller="thumbnails")
     li.thumbnail(ng-repeat="t in thumbnails")
-      .thumbnail__img: img(ng-src="{{t.thumb.src}}")
+      .thumbnail__img
+        img(ng-src="{{t.thumb.src}}")
+        h1.fpo F.P.O.
+        .bottom {{t.thumb.alt}}
