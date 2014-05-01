@@ -2,12 +2,12 @@
   @include clearfix();
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding-top: 56px + 16px;
+  margin-top: 56px + 16px;;
 
   @media #{$media-lg} {
     padding-left: 2.5%;
     padding-right: 2.5%;
+    margin-top: 56px;
   }
 
   @media #{$media-xl} {
@@ -53,15 +53,16 @@
 
 .thumbnails__online {
   position: absolute;
-  top: 56px + 16px;
+  bottom: 100%;
   right: 10px;
   margin: 0;
-  -webkit-transform: translateY(-100%);
-  color: rgba(#000000, 0.2);
+  color: #222222;
+  font-weight: 200;
 
 
   @media #{$media-sm} {
     right: 20px;
+    font-size: .9em;
   }
 
   @media #{$media-lg} {
@@ -75,15 +76,15 @@
 
 .thumbnails__title {
   position: absolute;
-  top: 56px + 16px;
+  bottom: 100%;
   left: 10px;
   margin: 0;
-  -webkit-transform: translateY(-100%);
-  color: rgba(#000000, 0.2);
+  color: #222222;
 
 
   @media #{$media-sm} {
     left: 20px;
+    font-size: 1.4em;
   }
 
   @media #{$media-lg} {
