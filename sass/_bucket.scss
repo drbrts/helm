@@ -6,15 +6,8 @@ $bucket-cta-bg: #4F4F4F !default;
 $bucket-footer-color: #ffffff !default;
 
 .bucket {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: relative;
   overflow: hidden;
-
-  @media (min-width: $screen-lg) {
-    position: relative;
-    height: auto;
-  }
 }
 
 
@@ -98,11 +91,17 @@ $bucket-footer-color: #ffffff !default;
 
   i {
     line-height: inherit;
+
+    &.fa-fw {
+      position: absolute;
+      left: 25px;
+    }
   }
 
-  .fa-fw {
-    position: absolute;
-    left: 25px;
+  .item--new {
+    @media #{$media-sm} {
+      display: none;
+    }
   }
 }
 

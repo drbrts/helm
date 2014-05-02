@@ -2,7 +2,9 @@
   @include clearfix();
   position: relative;
   width: 100%;
-  margin-top: 56px + 16px;;
+  margin-top: 56px + 16px;
+  overflow: hidden;
+
 
   @media #{$media-lg} {
     padding-left: 2.5%;
@@ -20,7 +22,7 @@
   $padding: 4px;
   @include block-grid(2, $padding);
 
-  @media (min-width: $screen-sm) {
+  @media (min-width: $screen-xs) {
     @include block-grid(3, $padding);
 
     // Weird ipad percentage issue was making these mis-aligned, so I floated
