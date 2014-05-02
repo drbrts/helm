@@ -12,3 +12,8 @@ body, html {
 .small {
   font-size: 60%;
 }
+
+@mixin user-select($prop) {
+  -webkit-user-select: $prop;
+          user-select: $prop;
+}
