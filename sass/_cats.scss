@@ -1,0 +1,17 @@
+.cats__container {
+
+}
+
+.cats {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  background: green;
+  height: 200px;
+  width: 100%;
+  z-index: 10;
+
+  .open & {
+    left: 0;
+  }
+}

@@ -7,8 +7,13 @@ link(rel="stylesheet" href="/app.css")
 script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js")
 script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.js")
 script(Src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js")
-script(src="//code.jquery.com/jquery-1.10.2.js")
+script(src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js")
 script(src="/app.js")
 
 body(ng-app="naiad")
   include jade/_bucket
+
+  script.
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);

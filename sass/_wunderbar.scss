@@ -1,4 +1,4 @@
-.wonderbar {
+.wunderbar {
   @include clearfix();
   position: relative;
   background: crimson;
@@ -26,12 +26,12 @@
   }
 }
 
-.wonderbar__container {
+.wunderbar__container {
   
 }
 
 
-.wonderbar__center {
+.wunderbar__center {
   display: none;
   height: 56px;
   overflow: hidden;
@@ -42,7 +42,7 @@
 }
 
 // Not a %placeholder_class because they don't expand through media queries.
-@mixin wonderbar__link {
+@mixin wunderbar__link {
   display: block;
   text-transform: uppercase;
   line-height: 42px;
@@ -59,8 +59,8 @@
   }
 }
 
-.wonderbar__link {
-  @include wonderbar__link;
+.wunderbar__link {
+  @include wunderbar__link;
   float: right;
   display: none;
   border-color: rgba(#000000, 0.3);
@@ -98,8 +98,8 @@
 
 }
 
-.wonderbar__link--categories {
-  @include wonderbar__link;
+.wunderbar__link--categories {
+  @include wunderbar__link;
   float: left;
   color: #ffffff;
 
@@ -134,8 +134,8 @@
   }
 }
 
-.wonderbar__link--filters {
-  @include wonderbar__link;
+.wunderbar__link--filters {
+  @include wunderbar__link;
   float: right;
   color: #ffffff;
 
@@ -149,10 +149,10 @@
   }
 }
 
-.wonderbar__link--free {
+.wunderbar__link--free {
   @include button-base();
   @include button-style(gold);
-  @include wonderbar__link;
+  @include wunderbar__link;
   color: black;
   width: 300px;
   margin: 6px auto 0;
