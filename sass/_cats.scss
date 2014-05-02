@@ -6,12 +6,20 @@
   position: absolute;
   top: 100%;
   right: 100%;
-  background: green;
-  height: 200px;
-  width: 100%;
+  background: salmon;
+  min-height: 200px;
   z-index: 10;
+  width: 260px;
+  -webkit-transition: -webkit-transform .25s;
 
   .open & {
-    left: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
   }
+}
+
+
+.cats__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

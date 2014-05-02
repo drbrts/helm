@@ -1,0 +1,5 @@
+.cats__container(ng-controller="categories")
+  .cats
+    ul.cats__list
+      li(ng-repeat="cat in categories")
+        {{cat.names.text}} {{cat.counts.text}}

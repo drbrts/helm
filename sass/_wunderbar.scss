@@ -105,7 +105,7 @@
 
   @media #{$media-sm} {
     background: crimson;
-    min-width: 250px;
+    width: 260px;
   }
 
   @media #{$media-md} {
@@ -120,7 +120,7 @@
     float: left;
     margin-right: .5em;
 
-    @media #{$media-sm} {
+    @media #{$media-lg} {
       display: none;
     }
   }

@@ -29,9 +29,9 @@ $bucket-footer-color: #ffffff !default;
     -webkit-transform: translate3d(-260px, 0, 0);
 
 
-    @media (min-width: $screen-lg) {
-      -webkit-transform: translate3d(0, 0, 0);
-    }
+    // @media (min-width: $screen-lg) {
+    //   -webkit-transform: translate3d(0, 0, 0);
+    // }
   }
 }
 
