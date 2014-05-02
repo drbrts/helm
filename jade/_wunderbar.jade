@@ -5,11 +5,10 @@ nav.wunderbar__container
         | Free Account
 
     li
-      a.wunderbar__link--categories(dropdown-toggle)
+      a.wunderbar__link--categories(ng-click="catsActive = !catsActive")
         .caret: i.fa.fa-caret-down
         .icon: i.fa.fa-search
         | Categories
-      include _cats
 
     li
       a.wunderbar__link--filters(dropdown-toggle)

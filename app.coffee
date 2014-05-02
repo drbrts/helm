@@ -20,5 +20,28 @@ angular.module 'naiad', [
     $scope.thumbnails = data.results.collection1
 
 .controller 'categories', (kimono, $scope) ->
+  # $scope.catsActive = false;
+  $scope.catsStyle = ->
+    if $scope.catsActive
+      'height': "#{$scope.categoriesHeight}px"
+    else
+      'height': 0
+
   kimono.getCategories().success (data) ->
     $scope.categories = data.results.categories
+
+
+.directive 'getHeight', ($timeout) ->
+  restrict: 'A'
+  link: (scope, element, attrs) ->
+    scope.$watch 'categories', ->
+      scope.categoriesHeight = element[0].offsetHeight
+
+# .directive 'setHeight', ->
+#   restrict: 'A'
+#   link: (scope, element, attrs) ->
+#     scope.catsStyle = ->
+#       if scope.catsActive
+#         'height': "#{scope.categoriesHeight}px"
+#       else
+#         'height': 0

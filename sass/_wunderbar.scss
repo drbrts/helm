@@ -26,9 +26,6 @@
   }
 }
 
-.wunderbar__container {
-  
-}
 
 
 .wunderbar__center {
@@ -43,6 +40,7 @@
 
 // Not a %placeholder_class because they don't expand through media queries.
 @mixin wunderbar__link {
+  @include user-select(none);
   display: block;
   text-transform: uppercase;
   line-height: 42px;

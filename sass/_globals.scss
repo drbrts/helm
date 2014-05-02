@@ -15,3 +15,14 @@ body, html {
   -webkit-user-select: $prop;
           user-select: $prop;
 }
+
+
+.tanker {
+  position: relative;
+  padding-top: 56px + 16px;
+  background: white;
+
+  @media #{$media-lg} {
+    padding-top: 56px;
+  }
+}

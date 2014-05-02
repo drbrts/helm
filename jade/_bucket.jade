@@ -2,11 +2,13 @@
   article.bucket__article
     include _masthead
     include _wunderbar
+    include _cats
     include _thumbnails
     .bucket__shield(ng-click="bucketActive = !bucketActive")
 
   aside.bucket__aside
     ul.bucket__nav
+      //- Logged out
       li.bucket__form
         span.clearfix
           label Email
@@ -26,12 +28,14 @@
         | Site Language
         i.pull-right.fa.fa-chevron-down
 
-      //- //- Logged in.
+      //- Logged in.
+      //- li: a <i class="fa fa-user fa-fw"></i> BigTigsLover
       //- li: a <i class="fa fa-envelope fa-fw"></i> Mail Messages
       //- li: a <i class="fa fa-heart fa-fw"></i> My Favorites
       //- li: a <i class="fa fa-clock-o fa-fw"></i> Recent Purchase
       //- li: a <i class="fa fa-check fa-fw"></i> Daily Spending Limit
       //- li: a <i class="fa fa-user fa-fw"></i> My Account
+
       //- li: a <i class="fa fa-rocket fa-fw"></i> Eventual Tour Link
 
       li.bucket__cta

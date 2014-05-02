@@ -2,13 +2,15 @@
   @include clearfix();
   position: relative;
   width: 100%;
-  margin-top: 56px + 16px;
-  // overflow: hidden;
+  overflow: hidden;
+  padding-top: 16px;
+  z-index: 0;
 
   @media #{$media-lg} {
+    padding-top: 0;
+    overflow: visible;
     padding-left: 2.5%;
     padding-right: 2.5%;
-    margin-top: 56px;
   }
 
   @media #{$media-xl} {
@@ -54,7 +56,7 @@
 
 .thumbnails__online {
   position: absolute;
-  bottom: 100%;
+  top: 0;
   right: 10px;
   margin: 0;
   color: #222222;
@@ -68,6 +70,8 @@
 
   @media #{$media-lg} {
     left: 2.5%;
+    top: auto;
+    bottom: 100%;
   }
 
   @media #{$media-xl} {
@@ -77,11 +81,10 @@
 
 .thumbnails__title {
   position: absolute;
-  bottom: 100%;
+  top: 0;
   left: 10px;
   margin: 0;
   color: #222222;
-
 
   @media #{$media-sm} {
     left: 20px;
