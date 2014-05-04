@@ -21,6 +21,8 @@ body, html {
   position: relative;
   padding-top: 56px + 16px;
   background: white;
+  z-index: 0;
+  overflow: hidden;
 
   @media #{$media-lg} {
     padding-top: 56px;

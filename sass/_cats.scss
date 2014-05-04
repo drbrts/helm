@@ -49,3 +49,19 @@
   margin: 0;
   padding: 0;
 }
+
+.cats__form {
+  padding: 1em 10px 0;
+
+  @media #{$media-sm} {
+    padding: 1em 20px;
+  }
+
+  @media #{$media-lg} {
+    display: none;
+  }
+
+  input {
+
+  }
+}

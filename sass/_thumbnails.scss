@@ -2,9 +2,6 @@
   @include clearfix();
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding-top: 16px;
-  z-index: 0;
 
   @media #{$media-lg} {
     padding-top: 0;
@@ -56,7 +53,7 @@
 
 .thumbnails__online {
   position: absolute;
-  top: 0;
+  bottom: 100%;
   right: 10px;
   margin: 0;
   color: #222222;
@@ -81,7 +78,7 @@
 
 .thumbnails__title {
   position: absolute;
-  top: 0;
+  bottom: 100%;
   left: 10px;
   margin: 0;
   color: #222222;

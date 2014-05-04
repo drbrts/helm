@@ -1,5 +1,8 @@
 .cats__container(ng-controller="categories" ng-class="{'open': !!catsActive}" set-height ng-style="catsStyle()")
   .cats(get-height)
+    form.cats__form
+      .cats__search
+        input(type="text")
     ul.cats__list
       li(ng-repeat="cat in categories")
         {{cat.names.text}} {{cat.counts.text}}
