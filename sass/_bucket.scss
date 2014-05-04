@@ -45,9 +45,16 @@ $bucket-footer-color: #ffffff !default;
   z-index: 20;
   background: rgba(#000000, 0.5);
 
-  .bucketActive &,
+  .bucketActive & {
+    display: block;
+  }
+
   .catsActive & {
     display: block;
+
+    @media #{$media-lg} {
+      display: none;
+    }
   }
 }
 

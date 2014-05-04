@@ -3,16 +3,20 @@ $masthead-background: #000 !default;
 $masthead-nav-color: #999 !default;
 
 .masthead {
+  position: relative;
   background: $masthead-background;
   height: 42px;
 
-  @media (min-width: $screen-sm) {
+  @media #{$media-sm} {
     height: 56px;
+  }
+
+  @media #{$media-lg} {
+    z-index: 50;
   }
 
   .bucketActive &,
   .catsActive & {
-    position: relative;
     z-index: 30;
   }
 }
@@ -23,12 +27,12 @@ $masthead-nav-color: #999 !default;
   height: 100%;
   padding: 3px 0;
 
-  @media (min-width: $screen-sm) {
+  @media #{$media-sm} {
     margin-left: 20px;
     padding: 4px 0;
   }
 
-  @media (min-width: $screen-lg) {
+  @media #{$media-lg} {
     margin-left: 28px;
   }
 
@@ -36,7 +40,7 @@ $masthead-nav-color: #999 !default;
     display: inline-block;
     max-height: 36px;
 
-    @media (min-width: $screen-sm) {
+    @media #{$media-sm} {
       max-height: 48px;
     }
   }
@@ -53,7 +57,7 @@ $masthead-nav-color: #999 !default;
   line-height: 42px;
   text-transform: uppercase;
 
-  @media (min-width: $screen-sm) {
+  @media #{$media-sm} {
     line-height: 56px;
   }
 
@@ -64,7 +68,7 @@ $masthead-nav-color: #999 !default;
   .item--join {
     display: none;
 
-    @media (min-width: $screen-sm) {
+    @media #{$media-sm} {
       display: inline-block;
     }
   }
@@ -79,7 +83,7 @@ $masthead-nav-color: #999 !default;
     margin: 0;
     font-size: 11px;
 
-    @media (min-width: $screen-lg) {
+    @media #{$media-lg} {
       height: 42px;
       line-height: 42px;
       vertical-align: bottom;
@@ -88,7 +92,7 @@ $masthead-nav-color: #999 !default;
 
   .item--login {
     display: none;
-    @media (min-width: $screen-lg) {
+    @media #{$media-lg} {
       display: inline-block;
     }
   }
@@ -112,7 +116,7 @@ $masthead-nav-color: #999 !default;
   }
 
   .item--menu {
-    @media (min-width: $screen-lg) {
+    @media #{$media-lg} {
       display: none;
     }
 
@@ -120,11 +124,11 @@ $masthead-nav-color: #999 !default;
       display: block;
       padding: 0 10px;
 
-      @media (min-width: $screen-sm) {
+      @media #{$media-sm} {
         padding:0 20px;
       }
 
-      @media (min-width: $screen-lg) {
+      @media #{$media-lg} {
         margin-right: 28px;
       }
     }
@@ -149,13 +153,13 @@ $masthead-nav-color: #999 !default;
   & > li {
     display: none;
 
-    @media (min-width: $screen-sm) {
+    @media #{$media-sm} {
       &.new-models {
         display: inline-block;
       }
     }
 
-    @media (min-width: $screen-lg) {
+    @media #{$media-lg} {
       display: inline-block;
     }
   }
@@ -165,7 +169,7 @@ $masthead-nav-color: #999 !default;
     padding: 0 10px;
     text-transform: uppercase;
 
-    @media (min-width: $screen-lg) {
+    @media #{$media-lg} {
       font-size: 11px;
       text-transform: none;
     }

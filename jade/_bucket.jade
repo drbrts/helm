@@ -1,11 +1,11 @@
-.bucket(ng-class="{'bucketActive': !!bucketActive, 'catsActive': !!catsActive}")
+.bucket(ng-class="{'bucketActive': !!bucketActive, 'catsActive': !!catsActive}" ng-controller="bucket")
   article.bucket__article
     include _masthead
     include _wunderbar
     include _cats
     .tanker
       include _thumbnails
-    .bucket__shield(ng-click="bucketActive = !bucketActive")
+    .bucket__shield(ng-click="shieldToggle()")
 
   aside.bucket__aside
     ul.bucket__nav

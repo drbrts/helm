@@ -1,8 +1,11 @@
-.cats__container(ng-controller="categories" ng-class="{'open': !!catsActive}" set-height ng-style="catsStyle()")
+.cats__container(ng-controller="categories" ng-class="{'open': !!catsActive}" set-height )
   .cats(get-height)
     form.cats__form
       .cats__search
-        input(type="text" placeholder="Search Anything")
+        .input__group
+          input(type="text" placeholder="Search Anything")
+          .input__icon
+            i.fa.fa-search
 
     tabset.cats__tabs
       tab(ng-repeat="group in categories track by $index" heading="{{{0: 'Girl Cams', 1: 'Guy Cams'}[$index]}}")

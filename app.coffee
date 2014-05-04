@@ -15,6 +15,13 @@ angular.module 'naiad', [
       $http.jsonp("#{url}/8wydh4so/?#{apikey}&#{callback}")
   }
 
+.controller 'bucket', ($scope) ->
+  $scope.shieldToggle = ->
+    if $scope.catsActive
+      $scope.catsActive = !$scope.catsActive
+    else
+      $scope.bucketActive = !$scope.bucketActive
+
 .controller 'thumbnails', (kimono, $scope) ->
   kimono.getThumbnails().success (data) ->
     $scope.thumbnails = data.results.collection1
