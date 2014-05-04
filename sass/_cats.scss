@@ -15,7 +15,7 @@
   top: 0;
   right: 100%;
   background: #8E8E8D;
-  min-height: 200px;
+  min-height: 126px;
   width: 260px;
   -webkit-transition: -webkit-transform .25s;
 
@@ -141,12 +141,22 @@
         width: 100%;
         float: none;
         border-bottom: 0 !important;
+        padding-left: 28px;
+        text-align: left;
       }
 
       &.active {
         background: #9A9A9A;
         color: #ffffff;
         border-bottom: 1px solid #9A9A9A;
+      }
+
+      &:last-child {
+        display: none;
+
+        @media #{$media-lg} {
+          display: list-item;
+        }
       }
     }
 
@@ -165,7 +175,8 @@
 
   .tab-content {
     background: #9A9A9A;
-    min-height: 150px;
+    min-height: 126px;
+    padding-right: 2em;
   }
 
   .tab-pane {
@@ -174,5 +185,19 @@
     &.active {
       display: block;
     }
+  }
+}
+
+.cats__pin {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  display: none;
+
+  @media #{$media-lg} {
+    display: block;
   }
 }

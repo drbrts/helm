@@ -35,8 +35,9 @@ angular.module 'naiad', [
 
   kimono.getCategories().success (data) ->
     $scope.categories = []
-    $scope.categories.push data.results.categories.slice 0, 34
-    $scope.categories.push data.results.categories.slice 34
+    $scope.categories[0] = data.results.categories.slice 0, 34
+    $scope.categories[1] = data.results.categories.slice 34
+    $scope.categories[2] = []
 
 .directive 'getHeight', ($timeout) ->
   restrict: 'A'
