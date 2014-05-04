@@ -37,6 +37,8 @@ angular.module 'naiad', [
     scope.$watch 'categories', ->
       scope.categoriesHeight = element[0].offsetHeight
 
+.filter 'stripLive', -> (count) ->
+  count.slice 0, -5
 # .directive 'setHeight', ->
 #   restrict: 'A'
 #   link: (scope, element, attrs) ->

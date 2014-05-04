@@ -5,4 +5,8 @@
         input(type="text")
     ul.cats__list
       li(ng-repeat="cat in categories")
-        {{cat.names.text}} {{cat.counts.text}}
+        a.cats__link
+          .pull-right
+            | {{cat.counts.text | stripLive}}
+            i.fa.fa-chevron-right
+          | {{cat.names.text}}

@@ -13,7 +13,7 @@
   position: absolute;
   top: 0;
   right: 100%;
-  background: salmon;
+  background: #9A9A9A;
   min-height: 200px;
   width: 260px;
   -webkit-transition: -webkit-transform .25s;
@@ -63,5 +63,17 @@
 
   input {
 
+  }
+}
+
+.cats__link {
+  display: block;
+  line-height: 42px;
+  padding: 0 10px;
+  border-top: 1px solid #B7B7B7;
+  color: #ffffff;
+
+  i {
+    margin-left: .5em;
   }
 }

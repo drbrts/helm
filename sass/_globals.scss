@@ -28,3 +28,7 @@ body, html {
     padding-top: 56px;
   }
 }
+
+.clearfix {
+  @include clearfix();
+}
