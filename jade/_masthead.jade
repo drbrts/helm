@@ -10,7 +10,7 @@
 
   ul.masthead__list
     li.item--join: a.link--join Free Acount
-    li.item--menu: span.link--menu(ng-click="bucketActive = !bucketActive")
+    li.item--menu: span.link--menu(ng-click="bucketActive = !bucketActive; catsActive = false")
       | {{{true: 'Close', false: 'Login'}[!!bucketActive]}}
       i.fa(ng-class="{true: 'fa-chevron-right', false: 'fa-bars'}[!!bucketActive]")
     li.item--login: a.link--login Login <i class="fa fa-caret-down fa-lg"></i>

@@ -6,6 +6,11 @@
   margin: 0;
   padding: 0;
   height: 42px;
+  z-index: 30;
+
+  .bucketActive & {
+    z-index: 0;
+  }
 
   @media #{$media-sm} {
     background: lightblue;
@@ -25,8 +30,6 @@
     }
   }
 }
-
-
 
 .wunderbar__center {
   display: none;

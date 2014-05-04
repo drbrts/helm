@@ -9,6 +9,12 @@ $masthead-nav-color: #999 !default;
   @media (min-width: $screen-sm) {
     height: 56px;
   }
+
+  .bucketActive &,
+  .catsActive & {
+    position: relative;
+    z-index: 30;
+  }
 }
 
 .masthead__brand {

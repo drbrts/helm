@@ -2,11 +2,14 @@
   .cats(get-height)
     form.cats__form
       .cats__search
-        input(type="text")
-    ul.cats__list
-      li(ng-repeat="cat in categories")
-        a.cats__link
-          .pull-right
-            | {{cat.counts.text | stripLive}}
-            i.fa.fa-chevron-right
-          | {{cat.names.text}}
+        input(type="text" placeholder="Search Anything")
+
+    tabset.cats__tabs
+      tab(ng-repeat="group in categories track by $index" heading="{{{0: 'Girl Cams', 1: 'Guy Cams'}[$index]}}")
+        ul.cats__list
+          li(ng-repeat="cat in group")
+            a.cats__link
+              .pull-right
+                | {{cat.counts.text | stripLive}}
+                i.fa.fa-chevron-right
+              | {{cat.names.text}}

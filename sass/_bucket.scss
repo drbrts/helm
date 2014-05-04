@@ -25,7 +25,7 @@ $bucket-footer-color: #ffffff !default;
   -webkit-transition: -webkit-transform .25s;
   -webkit-transform: translate3d(0, 0, 0);
 
-  .active & {
+  .bucketActive & {
     -webkit-transform: translate3d(-260px, 0, 0);
 
 
@@ -45,7 +45,8 @@ $bucket-footer-color: #ffffff !default;
   z-index: 20;
   background: rgba(#000000, 0.5);
 
-  .active & {
+  .bucketActive &,
+  .catsActive & {
     display: block;
   }
 }
@@ -63,7 +64,7 @@ $bucket-footer-color: #ffffff !default;
   -webkit-transform: translate3d(50%, 0, 0);
   -webkit-transition: -webkit-transform .25s;
 
-  .active & {
+  .bucketActive & {
     -webkit-transform: translate3d(0, 0, 0);
   }
 

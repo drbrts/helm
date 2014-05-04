@@ -20,7 +20,6 @@ angular.module 'naiad', [
     $scope.thumbnails = data.results.collection1
 
 .controller 'categories', (kimono, $scope) ->
-  # $scope.catsActive = false;
   $scope.catsStyle = ->
     if $scope.catsActive
       'height': "#{$scope.categoriesHeight}px"
@@ -28,8 +27,9 @@ angular.module 'naiad', [
       'height': 0
 
   kimono.getCategories().success (data) ->
-    $scope.categories = data.results.categories
-
+    $scope.categories = []
+    $scope.categories.push data.results.categories.slice 0, 34
+    $scope.categories.push data.results.categories.slice 34
 
 .directive 'getHeight', ($timeout) ->
   restrict: 'A'
