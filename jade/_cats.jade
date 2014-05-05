@@ -1,5 +1,5 @@
-.cats__container(ng-controller="categories" ng-class="{'open': !!catsActive}" set-height )
-  .cats(get-height)
+.cats__container(ng-controller="categories" ng-class="{'open': !!catsActive}")
+  .cats
     form.cats__form
       .cats__search
         .input__group
@@ -17,6 +17,3 @@
                 | {{cat.counts.text | stripLive}}
                 i.fa.fa-chevron-right
               | {{cat.names.text}}
-
-    .cats__pin
-      i.fa.fa-lg.fa-thumb-tack

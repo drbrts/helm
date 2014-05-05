@@ -1,5 +1,6 @@
 angular.module 'naiad', [
   'ngTouch'
+  'ngCookies'
   'ui.bootstrap'
 ]
 
@@ -15,23 +16,23 @@ angular.module 'naiad', [
       $http.jsonp("#{url}/8wydh4so/?#{apikey}&#{callback}")
   }
 
-.controller 'bucket', ($scope) ->
+.controller 'bucket', ($scope, $cookieStore) ->
+  $scope.catsPinned = $cookieStore.get 'catsActive'
+  $scope.catsActive = $scope.catsPinned
+
+  $scope.$watch 'catsActive', (val) ->
+    $scope.catsPinned = false if !val
+    $cookieStore.put 'catsActive', val
+
   $scope.shieldToggle = ->
-    if $scope.catsActive
-      $scope.catsActive = !$scope.catsActive
-    else
-      $scope.bucketActive = !$scope.bucketActive
+    if $scope.catsActive then $scope.catsActive = !$scope.catsActive
+    else $scope.bucketActive = !$scope.bucketActive
 
 .controller 'thumbnails', (kimono, $scope) ->
   kimono.getThumbnails().success (data) ->
     $scope.thumbnails = data.results.collection1
 
 .controller 'categories', (kimono, $scope) ->
-  $scope.catsStyle = ->
-    if $scope.catsActive
-      'height': "#{$scope.categoriesHeight}px"
-    else
-      'height': 0
 
   kimono.getCategories().success (data) ->
     $scope.categories = []
@@ -39,19 +40,5 @@ angular.module 'naiad', [
     $scope.categories[1] = data.results.categories.slice 34
     $scope.categories[2] = []
 
-.directive 'getHeight', ($timeout) ->
-  restrict: 'A'
-  link: (scope, element, attrs) ->
-    scope.$watch 'categories', ->
-      scope.categoriesHeight = element[0].offsetHeight
-
 .filter 'stripLive', -> (count) ->
   count.slice 0, -5
-# .directive 'setHeight', ->
-#   restrict: 'A'
-#   link: (scope, element, attrs) ->
-#     scope.catsStyle = ->
-#       if scope.catsActive
-#         'height': "#{scope.categoriesHeight}px"
-#       else
-#         'height': 0

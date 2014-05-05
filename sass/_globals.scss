@@ -23,6 +23,7 @@ body, html {
   background: white;
   z-index: 0;
   overflow: hidden;
+  min-height: 1000px;
 
   @media #{$media-lg} {
     padding-top: 56px;
@@ -33,7 +34,11 @@ body, html {
     .open + & {
       -webkit-transform: translate3d(0, 126px, 0);
     }
+  }
 
+  .catsPinned & {
+    -webkit-transition: none;
+    -webkit-transform: translate3d(0, 126px, 0);
   }
 }
 
