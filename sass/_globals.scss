@@ -37,8 +37,10 @@ body, html {
   }
 
   .catsPinned & {
-    -webkit-transition: none;
-    -webkit-transform: translate3d(0, 126px, 0);
+    @media #{$media-lg} {
+      -webkit-transition: none;
+      -webkit-transform: translate3d(0, 126px, 0);
+    }
   }
 }
 
