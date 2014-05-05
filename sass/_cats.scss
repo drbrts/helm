@@ -133,9 +133,13 @@
     & > li {
       width: 50%;
       float: left;
-      text-align: center;
+      padding-left: 10px;
       color: #CCCCCB;
       border-bottom: 1px solid #B7B7B7;
+
+      @media #{$media-md} {
+        padding-left: 20px;
+      }
 
       @media #{$media-lg} {
         width: 100%;
@@ -176,7 +180,10 @@
   .tab-content {
     background: #9A9A9A;
     min-height: 126px;
-    padding-right: 2em;
+
+    @media #{$media-lg} {
+      padding-right: 2em;
+    }
   }
 
   .tab-pane {
