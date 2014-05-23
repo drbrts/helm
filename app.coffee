@@ -1,4 +1,4 @@
-angular.module 'naiad', [
+angular.module 'helm', [
   'ngTouch'
   'ngCookies'
   'ui.bootstrap'
