@@ -16,13 +16,14 @@ angular.module 'helm', [
       $http.jsonp("#{url}/8wydh4so/?#{apikey}&#{callback}")
   }
 
-.controller 'bucket', ($scope, $cookieStore) ->
-  $scope.catsPinned = $cookieStore.get 'catsActive'
+.controller 'bucket', ($scope, $cookies, $cookieStore) ->
+  $scope.catsPinned = $cookies.categories
   $scope.catsActive = $scope.catsPinned
 
   $scope.$watch 'catsActive', (val) ->
     $scope.catsPinned = false if !val
-    $cookieStore.put 'catsActive', val
+    if val then $cookies.categories = 'active'
+    else $cookieStore.remove 'categories'
 
   $scope.shieldToggle = ->
     if $scope.catsActive then $scope.catsActive = !$scope.catsActive
@@ -33,7 +34,6 @@ angular.module 'helm', [
     $scope.thumbnails = data.results.collection1
 
 .controller 'categories', (kimono, $scope) ->
-
   kimono.getCategories().success (data) ->
     $scope.categories = []
     $scope.categories[0] = data.results.categories.slice 0, 34
