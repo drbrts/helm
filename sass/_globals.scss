@@ -19,13 +19,13 @@ body, html {
 
 .tanker {
   position: relative;
-  padding-top: 56px + 16px;
+  padding-top: (56px + 16px);
   background: white;
   z-index: 0;
   overflow: hidden;
   min-height: 1000px;
 
-  @media #{$media-lg} {
+  @media #{$media-md} {
     padding-top: 56px;
     z-index: 50;
     -webkit-transition: -webkit-transform .25s;
@@ -40,6 +40,16 @@ body, html {
     @media #{$media-lg} {
       -webkit-transition: none;
       -webkit-transform: translate3d(0, 126px, 0);
+    }
+  }
+
+  &.static {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @media #{$media-md} {
+      padding-right: (56px / 2);
+      padding-left: (56px / 2);
     }
   }
 }

@@ -2,6 +2,7 @@ angular.module 'helm', [
   'ngTouch'
   'ngCookies'
   'ui.bootstrap'
+  'placeholders'
 ]
 
 .factory 'kimono', ($http) ->
