@@ -25,6 +25,7 @@ $tricorder-border-color: #999999 !default;
       display: none;
 
       @media #{$media-md} {
+        position: relative;
         padding: 0 0 1px 0;
         display: list-item;
       }
@@ -74,5 +75,22 @@ $tricorder-border-color: #999999 !default;
     }
   }
 
-  .select
+  .select {
+    // position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    @media #{$media-md} {
+      // display: none;
+    }
+
+    select {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+      // opacity: 0;
+    }
+  }
 }

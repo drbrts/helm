@@ -1,3 +1,5 @@
+nop = ->
+
 angular.module 'helm', [
   'ngTouch'
   'ngCookies'
@@ -41,5 +43,10 @@ angular.module 'helm', [
     $scope.categories[1] = data.results.categories.slice 34
     $scope.categories[2] = []
 
-.filter 'stripLive', -> (count) ->
-  count.slice 0, -5
+.controller 'tricorder', ($scope) ->
+  $scope.data = 
+    activeTab: 'cinfo'
+
+.filter 'stripLive', ->
+  (count) -> count.slice 0, -5
+
