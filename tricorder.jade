@@ -1,17 +1,7 @@
 .tanker.static
   .tricorder(ng-controller="tricorder")
-    .hide
-      span(ng-init="isCinfo = data.activeTab == 'cinfo'")
-      span(ng-init="isUpdatecard = data.activeTab == 'updatecard'")
-      span(ng-init="isProfile = data.activeTab == 'profile'")
-      span(ng-init="isLimits = data.activeTab == 'limits'")
-      span(ng-init="isPass = data.activeTab == 'pass'")
-      span(ng-init="isEmail = data.activeTab == 'email'")
-      span(ng-init="isSiteoptions = data.activeTab == 'siteoptions'")
 
-
-
-    .select: select(ng-model="data.activeTab")
+    .select: select(ng-model="data.activeTab" dan-select)
       option(value="cinfo") Contact Information
       option(value="updatecard") Payment Information
       option(value="profile") Personal Profile
@@ -20,33 +10,26 @@
       option(value="email") Email Preferences
       option(value="siteoptions") Options
 
-    tabset
-      tab(heading="Contact Information" select="data.activeTab = 'cinfo'"
-        active="isCinfo")
+    tabset(dan-tabset)
+      tab(heading="Contact Information" select="setOption('cinfo')")
         div(ph-txt="10p")
 
-      tab(heading="Payment Information" select="data.activeTab = 'updatecard'"
-        active="isUpdatecard")
+      tab(heading="Payment Information" select="setOption('updatecard')")
         div(ph-txt="10p")
 
-      tab(heading="Personal Profile" select="data.activeTab = 'profile'"
-        active="isProfile")
+      tab(heading="Personal Profile" select="setOption('profile')")
         div(ph-txt="10p")
 
-      tab(heading="Daily Spending Limit" select="data.activeTab = 'limits'"
-        active="isLimits")
+      tab(heading="Daily Spending Limit" select="setOption('limits')")
         div(ph-txt="10p")
 
-      tab(heading="Password" select="data.activeTab = 'pass'"
-        active="isPass")
+      tab(heading="Password" select="setOption('pass')")
         div(ph-txt="10p")
 
-      tab(heading="Email Preferences" select="data.activeTab = 'email'"
-        active="isEmail")
+      tab(heading="Email Preferences" select="setOption('email')")
         div(ph-txt="10p")
 
-      tab(heading="Options" select="data.activeTab = 'siteoptions'"
-        active="isSiteoptions")
+      tab(heading="Options" select="setOption('siteoptions')")
         div(ph-txt="10p")
 
     aside
