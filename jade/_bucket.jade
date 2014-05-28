@@ -3,8 +3,8 @@
     include _masthead
     include _wunderbar
     include _cats
-    .tanker
-      include _thumbnails
+    != yield
+
     .bucket__shield(ng-click="shieldToggle()")
 
   aside.bucket__aside

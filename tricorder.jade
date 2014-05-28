@@ -1,0 +1,53 @@
+.tanker.static
+  .tricorder(ng-controller="tricorder")
+    .hide
+      span(ng-init="isCinfo = data.activeTab == 'cinfo'")
+      span(ng-init="isUpdatecard = data.activeTab == 'updatecard'")
+      span(ng-init="isProfile = data.activeTab == 'profile'")
+      span(ng-init="isLimits = data.activeTab == 'limits'")
+      span(ng-init="isPass = data.activeTab == 'pass'")
+      span(ng-init="isEmail = data.activeTab == 'email'")
+      span(ng-init="isSiteoptions = data.activeTab == 'siteoptions'")
+
+
+
+    .select: select(ng-model="data.activeTab")
+      option(value="cinfo") Contact Information
+      option(value="updatecard") Payment Information
+      option(value="profile") Personal Profile
+      option(value="limits") Daily Spending Limit
+      option(value="pass") Password
+      option(value="email") Email Preferences
+      option(value="siteoptions") Options
+
+    tabset
+      tab(heading="Contact Information" select="data.activeTab = 'cinfo'"
+        active="isCinfo")
+        div(ph-txt="10p")
+
+      tab(heading="Payment Information" select="data.activeTab = 'updatecard'"
+        active="isUpdatecard")
+        div(ph-txt="10p")
+
+      tab(heading="Personal Profile" select="data.activeTab = 'profile'"
+        active="isProfile")
+        div(ph-txt="10p")
+
+      tab(heading="Daily Spending Limit" select="data.activeTab = 'limits'"
+        active="isLimits")
+        div(ph-txt="10p")
+
+      tab(heading="Password" select="data.activeTab = 'pass'"
+        active="isPass")
+        div(ph-txt="10p")
+
+      tab(heading="Email Preferences" select="data.activeTab = 'email'"
+        active="isEmail")
+        div(ph-txt="10p")
+
+      tab(heading="Options" select="data.activeTab = 'siteoptions'"
+        active="isSiteoptions")
+        div(ph-txt="10p")
+
+    aside
+      button.large.expand Save Settings
