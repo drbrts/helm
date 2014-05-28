@@ -47,6 +47,30 @@ angular.module 'helm', [
   $scope.data = 
     activeTab: 'cinfo'
 
+
+.directive 'danSelect', ->
+  return (scope,elem,attrs)->
+    scope.$watch "data.activeTab", (val)->
+      console.log "select change", val
+      for opt, index in elem.children()
+        if opt.value is val
+          console.log "index found", index
+          scope.data.activeTabIndex = index
+          break;
+
+.directive 'danTabset', ->
+  return {
+    require: "tabset",
+    link: (scope,elem,attrs,ctrl) ->
+      scope.$watch "data.activeTabIndex", (val) ->
+        console.log "dan", val, ctrl.tabs, elem
+        ctrl.select ctrl.tabs[val]
+
+      scope.setOption = (slug) ->
+        scope.data.activeTab = slug
+  }
+
+
 .filter 'stripLive', ->
   (count) -> count.slice 0, -5
 
