@@ -1,7 +1,7 @@
 .tanker.static
   .tricorder(ng-controller="tricorder")
 
-    .select: select(ng-model="data.activeTab" dan-select)
+    .tricorder__select: select(ng-model="data.activeTab" tabset-select)
       option(value="cinfo") Contact Information
       option(value="updatecard") Payment Information
       option(value="profile") Personal Profile
@@ -10,7 +10,7 @@
       option(value="email") Email Preferences
       option(value="siteoptions") Options
 
-    tabset(dan-tabset)
+    tabset(tabset-select-active)
       tab(heading="Contact Information" select="setOption('cinfo')")
         div(ph-txt="10p")
 
@@ -32,5 +32,20 @@
       tab(heading="Options" select="setOption('siteoptions')")
         div(ph-txt="10p")
 
-    aside
-      button.large.expand Save Settings
+    aside.tricorder__aside.assistance
+      h3(style="margin-top: 0") Needs Assistance
+      ul.fa-ul
+        li
+          i.fa.fa-envelope.fa-li
+          | Email
+
+        li
+          i.fa.fa-phone.fa-li
+          | Phone
+
+        li
+          i.fa.fa-comment.fa-li
+          | Chat
+
+    aside.tricorder__aside
+      button.expand Save Settings

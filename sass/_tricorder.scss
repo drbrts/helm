@@ -11,11 +11,11 @@ $tricorder-border-color: #999999 !default;
     min-height: 42px;
 
     @media #{$media-md} {
-      @include grid-column(3);
+      @include grid-column(3, $collapse: true);
     }
 
     @media #{$media-lg} {
-      @include grid-column(2.5);
+      @include grid-column(2.5, $collapse: true);
     }
 
     li {
@@ -32,6 +32,10 @@ $tricorder-border-color: #999999 !default;
 
       &.active {
         display: list-item;
+
+        a {
+          background: darken(lightblue, 10%);
+        }
       }
     }
 
@@ -64,33 +68,50 @@ $tricorder-border-color: #999999 !default;
       display: block;
     }
   }
+}
 
-  aside {
-    @media #{$media-md} {
-      @include grid-column(9, $offset: 3);
-    }
+.tricorder__select {
+  position: relative;
+  z-index: 10;
+  width: 100%;
 
-    @media #{$media-lg} {
-      @include grid-column(2, $offset: 0);
-    }
+  @media #{$media-md} {
+    display: none;
   }
 
-  .select {
-    // position: absolute;
-    top: 0;
-    z-index: 10;
+  select {
+    -webkit-appearance: none;
     width: 100%;
+    height: 42px;
+    line-height: 42px;
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .display {
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+  }
+}
 
-    @media #{$media-md} {
-      // display: none;
-    }
+.tricorder__aside {
 
-    select {
-      -webkit-appearance: none;
-      width: 100%;
-      height: 42px;
-      line-height: 42px;
-      // opacity: 0;
+  @media #{$media-md} {
+    @include grid-column(9, $offset: 3);
+  }
+
+  @media #{$media-lg} {
+    @include grid-column(2, $offset: 0);
+    padding-right: 0;
+  }
+
+  &.assistance {
+    display: none;
+
+    @media #{$media-lg} {
+      display: block;
     }
   }
 }

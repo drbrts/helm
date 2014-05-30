@@ -47,28 +47,25 @@ angular.module 'helm', [
   $scope.data = 
     activeTab: 'cinfo'
 
-
-.directive 'danSelect', ->
-  return (scope,elem,attrs)->
-    scope.$watch "data.activeTab", (val)->
-      console.log "select change", val
+# sets `scope.data.activeTabIndex` to the currently selected option
+.directive 'tabsetSelect', ->
+  (scope, elem, attrs) ->
+    scope.$watch 'data.activeTab', (val) ->
       for opt, index in elem.children()
         if opt.value is val
-          console.log "index found", index
           scope.data.activeTabIndex = index
-          break;
+          break
 
-.directive 'danTabset', ->
-  return {
-    require: "tabset",
-    link: (scope,elem,attrs,ctrl) ->
-      scope.$watch "data.activeTabIndex", (val) ->
-        console.log "dan", val, ctrl.tabs, elem
-        ctrl.select ctrl.tabs[val]
+# @require 'ui.bootstrap'
+# this will link an the `ui.bootstrap.tabset` directive to an active index number
+.directive 'tabsetSelectActive', ->
+  require: 'tabset',
+  link: (scope, elem, attrs, ctrl) ->
+    scope.$watch 'data.activeTabIndex', (val) ->
+      ctrl.select ctrl.tabs[val]
 
-      scope.setOption = (slug) ->
-        scope.data.activeTab = slug
-  }
+    scope.setOption = (val) ->
+      scope.data.activeTab = val
 
 
 .filter 'stripLive', ->
